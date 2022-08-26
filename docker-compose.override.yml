@@ -1,0 +1,40 @@
+version: '3.4'
+
+services:
+  redis:
+    ports:
+      - "6379:6379"
+  rabbitmq:
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  api1:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8080:80"
+
+  api1-dapr:
+    command: ["./daprd",
+      "-app-id", "api1",
+      "-app-port", "80",
+      "-components-path", "/components"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
+
+  api2:
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+    ports:
+      - "8081:80"
+
+  api2-dapr:
+    command: ["./daprd",
+      "-app-id", "api2",
+      "-app-port", "80",
+      "-components-path", "/components"
+      ]
+    volumes:
+      - "./dapr/components/:/components"
