@@ -19,6 +19,10 @@ namespace Api1.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// °ó¶¨-Êä³ö
+        /// </summary>
+        /// <returns></returns>
         [HttpPost]
         public async Task Post()
         {

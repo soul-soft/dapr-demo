@@ -21,6 +21,10 @@ namespace Api2.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// ¶©ÔÄ
+        /// </summary>
+        /// <param name="student"></param>
         [HttpPost]
         [Topic("pubsub", "student-post")]
         public void Get(Student student)

@@ -20,6 +20,10 @@ namespace Api2.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// ∞Û∂®- ‰»Î
+        /// </summary>
+        /// <param name="student"></param>
         [HttpPost]
         public void Post(Student student)
         {

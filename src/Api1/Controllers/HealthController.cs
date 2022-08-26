@@ -17,7 +17,11 @@ namespace Api1.Controllers
             _dapr = dapr;
             _logger = logger;
         }
-
+        
+        /// <summary>
+        /// ½¡¿µ¼ì²é
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<bool> Get()
         {
