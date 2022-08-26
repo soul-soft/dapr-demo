@@ -19,6 +19,9 @@ namespace Api1.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// ״̬�洢
+        /// </summary>
         [HttpPost]
         public async void Post()
         {

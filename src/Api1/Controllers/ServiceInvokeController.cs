@@ -19,6 +19,10 @@ namespace Api1.Controllers
             _logger = logger;
         }
 
+        /// <summary>
+        /// 服务调用
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IEnumerable<WeatherForecast>> Get()
         {

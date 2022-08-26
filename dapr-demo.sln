@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dapr", "dapr", "{38A7B211-C20D-4404-BA40-E400002CE6C5}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\14483\Desktop\eShopOnDapr-main\dapr\configuration\config.yaml = C:\Users\14483\Desktop\eShopOnDapr-main\dapr\configuration\config.yaml
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "components", "components", "{8C6CFB9E-18C6-4887-B340-24E42D6273E0}"
 	ProjectSection(SolutionItems) = preProject

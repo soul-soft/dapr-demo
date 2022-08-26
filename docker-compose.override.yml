@@ -4,11 +4,16 @@ services:
   redis:
     ports:
       - "6379:6379"
+ 
   rabbitmq:
     ports:
       - "5672:5672"
       - "15672:15672"
-
+ 
+  zipkin:
+    ports:
+      - "9411:9411"
+ 
   api1:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
@@ -19,10 +24,11 @@ services:
     command: ["./daprd",
       "-app-id", "api1",
       "-app-port", "80",
-      "-components-path", "/components"
+      "-config", "/dapr/config.yaml",
+      "-components-path", "/dapr/components"
       ]
     volumes:
-      - "./dapr/components/:/components"
+      - "./dapr/:/dapr"
 
   api2:
     environment:
@@ -34,7 +40,8 @@ services:
     command: ["./daprd",
       "-app-id", "api2",
       "-app-port", "80",
-      "-components-path", "/components"
+      "-config", "/dapr/config.yaml",
+      "-components-path", "/dapr/components"
       ]
     volumes:
-      - "./dapr/components/:/components"
+      - "./dapr/:/dapr"
