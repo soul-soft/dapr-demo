@@ -10,6 +10,9 @@ services:
   rabbitmq:
     image: rabbitmq:3-management-alpine
   
+  dapr-placement:
+    image: "daprio/placement:1.8.0"
+  
   api1:
     image: ${DOCKER_REGISTRY-}api1
     build:

@@ -24,7 +24,7 @@ namespace Api1.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpPost]
-        public async Task Get()
+        public async Task Post()
         {
             await _dapr.PublishEventAsync("pubsub", "student-post", new Student
             {

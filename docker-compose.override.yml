@@ -13,7 +13,12 @@ services:
   zipkin:
     ports:
       - "9411:9411"
- 
+  
+  dapr-placement:
+    command: ["./placement", "-port", "9422", "-log-level", "debug"]
+    ports:
+      - "9422:9422"
+
   api1:
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
